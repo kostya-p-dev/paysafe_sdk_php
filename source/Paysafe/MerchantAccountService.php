@@ -50,7 +50,9 @@ class MerchantAccountService
         ));
 
         $response = $this->client->processRequest($request);
-
+        if (!isset($response['status'])) {
+            return false;
+        }
         return ($response['status'] == 'READY');
     }
 
