@@ -290,7 +290,7 @@ class MerchantAccountService
         ));
         $request = new Request(array(
             'method' => Request::POST,
-            'uri' => $this->prepareURI('/businessowners/' . $businessOwnerID->businnessOwnerId . '/canadiandrivinglicenses'),
+            'uri' => $this->prepareURI('/businessowners/'. $businessOwnerID->businnessOwnerId . '/canadiandrivinglicenses'),
             'body' => $businessOwnerID
         ));
         $response = $this->client->processRequest($request);
